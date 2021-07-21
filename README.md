@@ -22,13 +22,13 @@ Our mission is to make the experience of submitting assignments great for tens o
 
 I spent about two hours on installing LRR to a bare, remote Ubuntu server (Ubuntu 20.04 LTS).
 
-LRR needs Apache and MySQL to run.  I followed [How To Install Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 20.04] (https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04) to set up these server applications.
+LRR needs Apache and MySQL to run.  I followed [How To Install Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04) to set up these server applications.
 
 LRR uses a database called `lrr`.  I need to export existing `lrr` to a plain text file (including many sql commands) and import that text file to the newly created `lrr` database on the new server.
 The command for exporting the database is `mysqldump -u mnc -p lrr > lrr_database_dump.txt`.
-The command for importing is `mysql -u mnc -p lrr < lrr_database_dump.txt`.  Read [How to Import and Export MySQL Databases in Linux] (https://phoenixnap.com/kb/import-and-export-mysql-database) for more detail.
+The command for importing is `mysql -u mnc -p lrr < lrr_database_dump.txt`.  Read [How to Import and Export MySQL Databases in Linux](https://phoenixnap.com/kb/import-and-export-mysql-database) for more detail.
 
-LRR also needs to store assignment submissions.  We store them in a folder called `../../lrr_submission`.  Note that `lrr_submission` is two levels above the project folder (where many PHP files locate).  I copied this folder from the existing one.  I think it is also OK if you create an empty folder.   
+LRR also needs to store assignment submissions.  We store them in a folder called `../../lrr_submission`.  Note that `lrr_submission` is two levels above the project folder (where many PHP files reside).  I copied this folder from the existing one.  I think it is also OK if you create an empty folder.   
 We need to set a proper owner and accessibility for `lrr_submission` using the following two commands:
 `sudo chown -R www-data:www-data lrr_submission` and  `sudo chmod -R g+rw lrr_submission`.  Also, remember to change the user name and password in `lrr_submission//KeepItSafe.txt` for the database connection.
 
@@ -46,7 +46,7 @@ Rename LRR to lrr.  Change the owner of lrr: `sudo chown -R $USER:$USER /var/www
     </VirtualHost>
 
 Enable the site lrr: `sudo a2ensite lrr`.  Restart the apache server: `sudo systemctl reload apache2`.
-Visit the LRR application by entering this URL: http://121.4.94.30/.
+Visit the LRR application by entering this URL in a web browser: http://121.4.94.30/.
 
 
 ## Enock's steps
