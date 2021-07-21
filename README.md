@@ -154,7 +154,12 @@ To submit bug reports or improvement ideas, please ask Hui [lanhui at zjnu.edu.c
 
 ## Frequently Asked Questions
 
-Check FAQ.md (TBA) for details.
+
+1. Q: The web application's front page does not show properly, i.e., elements are not well aligned.
+   A: You missed two folders `css` and `font-awesome`.  These folders include third-party js or css files and therefore are not included.
+
+1. Q: What if I do not have any information about the `lrr` database?
+   A: You could use `lrr(1).sql` or `lrr_database.sql`.  It seems `lrr(1).sql` is more complete.
 
 
 
