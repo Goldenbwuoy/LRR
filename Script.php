@@ -633,17 +633,17 @@ if (!empty($_POST["frm_submitlab"])) {
     $targetfile4 = "";
 
     if(strlen($_FILES['attachment1']['name']) > 2 ) { // why greater than 2???
-        $targetfile = "/".$student_id."/".$url."/".$lab_name."/".urlencode($_FILES['attachment1']['name']);
+        $targetfile = "/".$student_id."/".$url."/".$lab_name."/".rawurlencode($_FILES['attachment1']['name']);
     }
    
     if(strlen($_FILES['attachment2']['name']) > 2 ) {
-        $targetfile2 = "/".$student_id."/".$url."/".$lab_name."/".urlencode($_FILES['attachment2']['name']); }
+        $targetfile2 = "/".$student_id."/".$url."/".$lab_name."/".rawurlencode($_FILES['attachment2']['name']); }
  
     if(strlen($_FILES['attachment3']['name']) > 2 ) {
-        $targetfile3 = "/".$student_id."/".$url."/".$lab_name."/".urlencode($_FILES['attachment3']['name']);}
+        $targetfile3 = "/".$student_id."/".$url."/".$lab_name."/".rawurlencode($_FILES['attachment3']['name']);}
    
     if(strlen($_FILES['attachment4']['name']) > 2 ) {
-        $targetfile4 = "/".$student_id."/".$url."/".$lab_name."/".urlencode($_FILES['attachment4']['name']);
+        $targetfile4 = "/".$student_id."/".$url."/".$lab_name."/".rawurlencode($_FILES['attachment4']['name']);
     }
 
     // When $group_id is not properly initialized, use integer 0 as its value.
