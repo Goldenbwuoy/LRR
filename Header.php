@@ -18,8 +18,8 @@ if (mysqli_connect_errno()) {
 
 <html>
 
-<header>
-    
+<head>
+
 <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
 <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -29,7 +29,7 @@ if (mysqli_connect_errno()) {
 <script src="./css/jquery.datetimepicker.min.js" type="text/javascript"></script>
 
 
-</header>
+</head>
 
 
 <body>
