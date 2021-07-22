@@ -32,7 +32,7 @@ if (isset($_SESSION["user_fullname"])) {
 
     <form method="post" action="Script.php" name="frm_login">
     <input type="hidden" name="frm_login" value="true"/>
-    Student ID / Email
+    Student ID / Instructor Email
     <input type="text" name="user" placeholder="Email / Student Number" class="form-control" required="required" />
     <br>
     Password
