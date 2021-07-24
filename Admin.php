@@ -143,17 +143,17 @@ if(isset($_SESSION['info_Admin_Users'])) {
      </div>
    
 
-        <!-- code contributed by Xu Xiaopeng (https://github.com/xxp1999) -->
-	
-   	<div id="menu2"  class="container tab-pane fade" style="margin-top:10px" >
-		<b>Please separate student numbers with spaces.</b><br>
-		<form action="batch_insert.php" method="post">
-		    <p>
-			<textarea cols="80" rows="16" name="users" required=""></textarea>
-	            </p>
-			<input type="submit" class="btn btn-primary" value="Create All"><br>
-		</form>	
-   	</div>
+      <!-- code contributed by Xu Xiaopeng (https://github.com/xxp1999) -->
+      
+      <div id="menu2"  class="container tab-pane fade" style="margin-top:10px" >
+	<b>Separate two student numbers with a space.</b><br>
+	<form action="batch_insert.php" method="post">
+	  <p>
+	    <textarea cols="80" rows="16" name="users" required=""></textarea>
+	  </p>
+	  <input type="submit" class="btn btn-primary" value="Register Students"><br>
+	</form>	
+      </div>
 	
   
   </div>
