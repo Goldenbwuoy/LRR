@@ -36,13 +36,13 @@ $user = explode(' ', $source2);
 for($index=0; $index < count($user); $index++) {
     $result = mysqli_query($conn, "SELECT * FROM `students_data` WHERE Student_ID='$user[$index]'");    
     if (mysqli_num_rows($result) < 1) {
-	if (! mysqli_query($conn, "REPLACE INTO `students_data`(`Student_ID`, `Passport_Number`) VALUES('$user[$index]', '')" ) ) {
+        if (! mysqli_query($conn, "REPLACE INTO `students_data`(`Student_ID`, `Passport_Number`) VALUES('$user[$index]', '')" ) ) {
             echo "SQL Error: " . $sql_stmt . "<br>" . mysqli_error($conn);
-	} else {
-	    echo "<p>Student number $user[$index] added.</p>";
-	}
+        } else {
+            echo "<p>Student number $user[$index] added.</p>";
+        }
     } else {
-       echo "<p><b>Student number $user[$index] already exists.</b></p>";
+        echo "<p><b>Student number $user[$index] already exists.</b></p>";
     }
 }
 
