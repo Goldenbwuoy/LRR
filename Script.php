@@ -118,7 +118,7 @@ if (!empty($_POST["frm_signup_2"])) {
     $result = mysqli_query($con, "SELECT * FROM users_table WHERE email='$email'");
     if(mysqli_num_rows($result) != 0)
     {
-        $_SESSION["info_signup2"]="Email adress ".$email."  is already in use.";
+        $_SESSION["info_signup2"]="Email address ".$email."  is already in use.";
         $_SESSION['user_fullname'] = null;
         header("Location: signup.php"); 
         return;       
@@ -323,7 +323,7 @@ if (!empty($_POST["frm_createlecturrer"])) {
                            "SELECT * FROM Users_Table WHERE email='$email'");
     if(mysqli_num_rows($result)!=0)
     {
-        $_SESSION["info_Admin_Users"]="Email adress : ".$email." is already in use.";
+        $_SESSION["info_Admin_Users"]="Email address : ".$email." is already in use.";
         header("Location: Admin.php");        
     }
     $sql= "INSERT INTO `users_table`(`Email`, `Password`, `Full_Name`, `UserType`) VALUES "
