@@ -2,14 +2,12 @@
 include 'NoDirectPhpAcess.php';
 ?>
 
-
 <?php
 $page = 'Courses+';
 include 'Header.php';
 $student_id = $_SESSION["user_student_id"];
 $group_id = $_SESSION["user_group_id"];
 $c_date = date("Y-m-d H:i");
-
 
 if (!empty($_GET["url"])) {
     $course_url = $_GET["url"];
@@ -67,8 +65,6 @@ if (!empty($_GET["url"])) {
     ?>
 
 </div>
-
-
 
 <?php
 
@@ -252,9 +248,6 @@ if ($_SESSION['user_type'] == "Student") {
 
         </div>
 
-
-
-
         <div id="menu2" class="container tab-pane"><br>
 
             <?php
@@ -274,8 +267,6 @@ Lab_Report_ID not in (select Lab_Report_ID from lab_report_submissions where (St
                 . ""
                 . "ORDER by Lab_Report_ID DESC");
 
-
-
             if (mysqli_num_rows($result) == 0) {
                 echo "You missed no lab reports in this course.";
             } else {
@@ -290,9 +281,6 @@ Lab_Report_ID not in (select Lab_Report_ID from lab_report_submissions where (St
                     $att3 = $row['Attachment_link_3'];
                     $att4 = $row['Attachment_link_4'];
                     $id = $row['Lab_Report_ID'];
-
-
-
 
                     $full_link = "<a href='~\..\Lab_Report_Assignments\\$att1'>$att1</a>";
 
@@ -317,17 +305,13 @@ Lab_Report_ID not in (select Lab_Report_ID from lab_report_submissions where (St
 
         </div>
 
-
-
         <div id="menu3" class="container tab-pane"><br>
             <?php
-
 
             $group_id = $_SESSION['group_id'];
             if ($group_id == "") {
                 $group_id = -1;
             }  // This fixes "Submitted report not shown" http://118.25.96.118/bugzilla/show_bug.cgi?id=176
-
 
             $sql_stmt = "SELECT Lab_Report_ID, Marks, `Course_ID`, `Posted_Date`, `Deadline`, `Instructions`, lab_reports_table.Title, `Attachment_link_1`, `Attachment_link_2`, `Attachment_link_3`, `Attachment_link_4`
          FROM `lab_reports_table`
@@ -335,7 +319,6 @@ Lab_Report_ID not in (select Lab_Report_ID from lab_report_submissions where (St
                 . " where Status='Pending' and (Student_id=$student_id or Course_Group_id=$group_id)  and Course_ID=$course_id) ORDER by Lab_Report_ID DESC";
 
             $resultx  = mysqli_query($con, $sql_stmt);
-
 
             if (mysqli_num_rows($resultx) == 0) {
                 echo "You have no lab report submissions in this course.";
@@ -373,7 +356,6 @@ Lab_Report_ID not in (select Lab_Report_ID from lab_report_submissions where (St
   $title <br> <span style='font-size:8pt'> $ins</span> 
    <br> <span style='font-size:8pt'>Posted : $posted  Deadline :   $deadline  ($marks Marks) &nbsp; &nbsp;  $submittedx&nbsp; <span class='btn-sm btn-success' style='margin-left:50px;'><i class='fa fa-Edit-circle'></i>  Submitted </span>
 <br> Submitted files: ";
-
 
                     $Sub_result = mysqli_query($con, "SELECT `Submission_ID`, `Submission_Date`, lab_report_submissions.Lab_Report_ID,
 lab_report_submissions.Student_id sub_std, lab_report_submissions.Course_Group_id, `Attachment1`,
@@ -415,21 +397,13 @@ where Lab_Report_ID=$lab_repo_id and (lab_report_submissions.Student_id='$studen
                         }
                     }
 
-
-
-
-
                     echo "</span></div></k>";
                 }
             }
             echo "";
             ?>
 
-
         </div>
-
-
-
 
         <?php
         $sqli = mysqli_query($con, "SELECT * from course_groups_table WHERE Course_Group_id=$group_id and Course_id=$course_id");
@@ -441,8 +415,6 @@ where Lab_Report_ID=$lab_repo_id and (lab_report_submissions.Student_id='$studen
             $Group_Member4 = $row['Group_Member4'];
         }
         ?>
-
-
 
         <div id="menu4" class="container tab-pane"><br>
             <?php
@@ -463,9 +435,6 @@ where Lab_Report_ID=$lab_repo_id and (lab_report_submissions.Student_id='$studen
                 . ""
                 . " lab_reports_table.Lab_Report_ID  in (select Lab_Report_ID from lab_report_submissions"
                 . " where  (Status='Marked' or Status='Remarking') and (Student_id=$student_id or Course_Group_id=$group_id)  and Course_ID=$course_id) ORDER by Submission_ID DESC");
-
-
-
 
             if (mysqli_num_rows($resultx) == 0) {
                 echo "You have no marked submissions in this course";
@@ -494,11 +463,8 @@ where Lab_Report_ID=$lab_repo_id and (lab_report_submissions.Student_id='$studen
                         $remarking = "<span  style='color:orange'><i class='fa fa-info-circle'></i> Remarking Request sent </span> <br> Remarking Reason:<i>$remarking_reason </i> <br>";
                     }
 
-
                     echo "   <k href='#'>   <div class='btn btn-default break-word' style='dislay:block; word-wrap: break-word; border: 1px solid #F0F0F0;border-left: 4px solid #03407B;'>
   $title  <b> ($marks Marks out of $Originalmarks)</b><br><small> Lecturer Feedback : $notes </small> &nbsp; $remarking   <br> Submission files :";
-
-
 
                     $Sub_result = mysqli_query($con, "SELECT `Submission_ID`, `Submission_Date`, lab_report_submissions.Lab_Report_ID,
   lab_report_submissions.Student_id sub_std, lab_report_submissions.Course_Group_id, `Attachment1`,
@@ -539,7 +505,6 @@ where Lab_Report_ID=$lab_repo_id and (lab_report_submissions.Student_id='$studen
             echo "</div></k>";
             ?>
 
-
         </div>
 
     </div>
@@ -555,12 +520,9 @@ where Lab_Report_ID=$lab_repo_id and (lab_report_submissions.Student_id='$studen
             $count_groups = $row['Course_Group_id'];
         }
 
-
         echo " <button onclick='CreateGroup()' class='btn btn-primary'> Create Group</button>";
 
         ?>
-
-
 
         <hr>
         <?php
@@ -577,7 +539,6 @@ course_groups_table.Course_Group_id=course_group_members_table.Course_Group_id W
                 $name = $row['Group_Name'];
                 $id = $row['Course_Group_id'];
                 $status = $row['Status'];
-
 
                 $extra = " -  <a href='#' class='' onclick='invite($id)'> Invite Others</a></small>";
 
@@ -598,29 +559,20 @@ where course_group_members_table.Course_Group_id=$id");
                     $status = $row['Status'];
                     $Student_ID = $row['Student_ID'];
 
-
                     echo "<li><small> $name-$Student_ID ($status)</small></li>";
                 }
             }
         }
         ?>
 
-
-
-
-
     </div>
 
     </div>
-
-
-
 
 <?php
 }
 include 'Footer.php';
 ?>
-
 
 <script src="./css/jquery-1.11.1.min.js"></script>
 <script src="./css/jquery-ui.min.js"></script>
@@ -629,9 +581,7 @@ include 'Footer.php';
 <script>
     function CreateGroup() {
 
-
         try {
-
 
             $('<form id="frm" method="get" action="Script.php"><input type="hidden" name="creategroup" value="true">\n\
  <input type="hidden" name="student_id" value="<?php echo $student_id; ?>" > Group Name  <input type="text" name="name">\n\
@@ -657,14 +607,9 @@ include 'Footer.php';
         }
     }
 
-
-
-
     function invite(id) {
 
-
         try {
-
 
             $('<form id="frm" method="get" action="Script.php"><input type="hidden" name="groupinvite" value="true">\n\
  <input type="hidden" name="groupid" value="' + id + '" > Enter Student_ID to Invite  <input type="text" name="student_id">\n\
@@ -690,17 +635,9 @@ include 'Footer.php';
         }
     }
 
-
-
-
-
-
-
-
     function accept(id, val) {
 
         try {
-
 
             $('<form id="frm" method="get" action="Script.php"><input type="hidden" name="acceptinvite" value="true">\n\
  <input type="hidden" name="groupid" value="' + id + '" > \n\  <input type="hidden" name="action" value="' + val + '" > \n\
@@ -727,8 +664,6 @@ include 'Footer.php';
             alert(e);
         }
     }
-
-
 
     function remarking(data) {
 
