@@ -1,22 +1,15 @@
 <?php
 session_start();
-
 error_reporting(0);
-  date_default_timezone_set('Asia/Shanghai');
+date_default_timezone_set('Asia/Shanghai');
 
+include "get_mysql_credentials.php";
+$con = mysqli_connect("localhost", $mysql_username, $mysql_password, "lrr");
 
-$con=mysqli_connect("localhost","root","","lrr");
-// Check connection
-if (mysqli_connect_errno())
-  {
+// Check database connection
+if (mysqli_connect_errno()) {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-else
-{
-
 }
-
-
 
 ?>
 
@@ -24,34 +17,25 @@ else
 <!DOCTYPE html>
 
 <html>
-<header>
- 
-   
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
-<!--<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/> -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/fontawesome.min.css" />
-<script src="http://118.25.96.118/nor/css/jquery.min.js" type="text/javascript"></script>
-<script src="http://118.25.96.118/nor/css/bootsrap.min.js" type="text/javascript"></script>
-<link href="http://118.25.96.118/nor/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-<script src="http://118.25.96.118/nor/css/jquery.datetimepicker.min.js" type="text/javascript"></script>
+<head>
 
+<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+<script src="./css/jquery.min.js" type="text/javascript"></script>
+<script src="./css/bootsrap.min.js" type="text/javascript"></script>
+<script src="./css/jquery.datetimepicker.min.js" type="text/javascript"></script>
 
 
-</header>
+</head>
 
 
 <body>
 
-
- <?php
- $curDateTime = date("Y-m-d H:i");
- include 'connect.php';
- 
- ?>   
-    
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="padding-left:150px;padding-right:150px;margin:auto;">
-  <a class="navbar-brand" href="~\..\index.php">    <img src="logo.png" style="width:30px;heigh:30px;"> LRRS</a>
+  <a class="navbar-brand" href="~\..\index.php"> <img src="logo.png" style="width:30px;heigh:30px;"> LRR </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -61,38 +45,40 @@ else
       <li class="nav-item active">
           
              <li class="nav-item active">
-                <a class='nav-link' href='~\..\Visitors.php'>     <i class='fa fa-globe'></i>  Visitor Portal <span class='sr-only'>(current)</span></a>
-            </li>
+                <!-- <a class='nav-link' href='~\..\Visitors.php'>     <i class='fa fa-globe'></i>  Visitor Portal <span class='sr-only'>(current)</span></a> -->
+             </li>
             <?php
             if(isset($_SESSION["user_fullname"]))
             {
            
-       echo "       <a class='nav-link' href='~\..\Courses.php'><i class='fa fa-book'></i> Courses <span class='sr-only'>(current)</span></a>";
-          
-           
+                echo "       <a class='nav-link' href='~\..\Courses.php'><i class='fa fa-book'></i> Courses <span class='sr-only'>(current)</span></a>";
             ?>
       </li>
-         
-    </ul>
+     </ul>
     <form class="form-inline my-2 my-lg-0" style="color:#fff;">
-        Welcome &nbsp; <b>  <?php echo $_SESSION['user_fullname']; 
-        ?> </b>  &nbsp;
+        Welcome &nbsp; <b>  <?php echo $_SESSION['user_fullname']; ?> </b>  &nbsp;
       
         <?php
-       $c_date=  date("Y-m-d H:i");
-        echo "(". $_SESSION['user_type'] .")   ";
-        
+            $c_date=  date("Y-m-d H:i");
+            if (isset( $_SESSION['user_student_id']))
+                echo "(". $_SESSION['user_type'] . " - " . $_SESSION['user_student_id'] .")   ";
+            else
+                echo "(". $_SESSION['user_type'] .")   ";                
         ?>
         
-        
-        
+<?php
+if ($_SESSION['user_type'] == "Lecturer") {
+   echo  "&nbsp;&nbsp;&nbsp;  <i class=\"fa fa-cog\" style=\"color:#fff;\"> </i> &nbsp;<a style='color:#fff !important' href=\"~\..\Admin.php\">Admin </a>";
+}
+?>
+         
+      &nbsp;&nbsp;&nbsp;  <i class="fa fa-user" style="color:#fff;"> </i>
+      &nbsp;<a href="#" style='color:#fff !important' onclick="updatePass(<?php echo $_SESSION['user_id'];?>)">Update password</a>
       &nbsp;&nbsp;&nbsp;  <i class="fa fa-lock" style="color:#fff;"> </i> &nbsp;<a style='color:#fff !important' href="~\..\logout.php">Logout </a>
    
-      &nbsp; |  &nbsp;<a href="#" style='color:#fff !important' onclick="updatePass(<?php echo $_SESSION['user_id'];?>)">Update Password</a>
-   
-    <?php
-            }
-            ?>
+          <?php
+          }
+          ?>
     </form>
   </div>
 </nav>
@@ -126,7 +112,7 @@ else
         }
         h1,h2,h3,h4{color:#03407B;}
         a {
-  color: #03407B;
+            color: #03407B;
 }
 
 .break-word {
@@ -152,33 +138,30 @@ else
    
     .ui-button{ background: #03488B; color:white }
 
-
-
-
     </style>
     
     
     
-    <script>
+<script>
     function updatePass(id)
     {
  
-       var pass=  prompt("Enter your New Password : ", "...");
+      var pass =  prompt("Enter your new password : ", "Enter a strong password");
         
-      if(!confirm('Are you  sure to Reset your  Password?'))
+      if(!confirm('Are you sure you want to reset your password?'))
       {
         return;  
       }
 
-            window.location.href="\Script.php\?action=passchange&uid="+id+"&pass="+pass;
+      window.location.href="\Script.php\?action=passchange&uid="+id+"&pass="+pass;
     }
     
-      function blockUser(id,status)
+    function blockUser(id,status)
     {
-          if(!confirm('Are you to change User Status'))
+      if(!confirm('Are you sure you want to change user status?'))
       {
         return;  
       }
-    window.location.href="\Script.php\?action=statuschange&uid="+id+"&status="+status;
-    }
-    </script>
+       window.location.href="\Script.php\?action=statuschange&uid="+id+"&status="+status;
+   }
+</script>
