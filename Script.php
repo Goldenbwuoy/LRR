@@ -106,8 +106,9 @@ if (!empty($_POST["frm_signup_2"])) {
 
     // check if email is taken
     $result = mysqli_query($con, "SELECT * FROM users_table WHERE email='$email'");
-    if (mysqli_num_rows($result) != 0) {
-        $_SESSION["info_signup2"] = "Email adress " . $email . "  is already in use.";
+    if(mysqli_num_rows($result) != 0)
+    {
+        $_SESSION["info_signup2"]="Email address ".$email."  is already in use.";
         $_SESSION['user_fullname'] = null;
         header("Location: signup.php");
         return;
@@ -272,15 +273,14 @@ if (!empty($_POST["frm_createlecturrer"])) {
     $type = mysqli_real_escape_string($con, $_POST["type"]);
     $password = $passport;
     // check if email is taken
-    $result = mysqli_query(
-        $con,
-        "SELECT * FROM Users_Table WHERE email='$email'"
-    );
-    if (mysqli_num_rows($result) != 0) {
-        $_SESSION["info_Admin_Users"] = "Email adress : " . $email . " is already in use.";
-        header("Location: Admin.php");
+    $result = mysqli_query($con,
+                           "SELECT * FROM Users_Table WHERE email='$email'");
+    if(mysqli_num_rows($result)!=0)
+    {
+        $_SESSION["info_Admin_Users"]="Email address : ".$email." is already in use.";
+        header("Location: Admin.php");        
     }
-    $sql = "INSERT INTO `users_table`(`Email`, `Password`, `Full_Name`, `UserType`) VALUES "
+    $sql= "INSERT INTO `users_table`(`Email`, `Password`, `Full_Name`, `UserType`) VALUES "
         . "('$email','$password','$fullname','$type')";
 
     if ($con->query($sql) === TRUE) {
