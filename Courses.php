@@ -181,9 +181,9 @@ New Date/Time <br><input type="date" name="date" required=""> <input type="time"
 
 <?php
                     if ($Type == "Individual") {
-                        echo "Submission Type  <input type='radio' name='type' value='Individual' checked /> Invidual  <input type='radio' name='type' value='Group' /> Group";
+                        echo "Submission Type  <input type='radio' name='type' value='Individual' checked /> Individual  <input type='radio' name='type' value='Group' /> Group";
                     } else {
-                        echo "Submission Type  <input type='radio' name='type' value='Individual' /> Invidual  <input type='radio' name='type' value='Group' checked> Group";
+                        echo "Submission Type  <input type='radio' name='type' value='Individual' /> Individual  <input type='radio' name='type' value='Group' checked> Group";
                     }		 
                     ?>
 
@@ -238,7 +238,7 @@ New Date/Time <br><input type="date" name="date" required=""> <input type="time"
                     Attachment 4
                         <input type='file'  name='attachment4' placeholder='Attachment 4' class='form-control' >
                     <br>
-                    Submission Type  <input type='radio' name='type' value='Individual' required=''> Invidual
+                    Submission Type  <input type='radio' name='type' value='Individual' required=''> Individual
 
                                                 <input type='radio' name='type' value='Group' required=''> Group
                     <hr>
