@@ -30,7 +30,7 @@ The command for importing is `mysql -u mnc -p lrr < lrr_database_dump.txt`.  Rea
 
 LRR also needs to store assignment submissions.  We store them in a folder called `../../lrr_submission`.  Note that `lrr_submission` is two levels above the project folder (where many PHP files reside).  I copied this folder from the existing one.  I think it is also OK if you create an empty folder.   
 We need to set a proper owner and accessibility for `lrr_submission` using the following two commands:
-`sudo chown -R www-data:www-data lrr_submission` and  `sudo chmod -R g+rw lrr_submission`.  Also, remember to change the user name and password in `lrr_submission//KeepItSafe.txt` for the database connection.
+`sudo chown -R www-data:www-data lrr_submission` and  `sudo chmod -R g+rw lrr_submission`.  Also, remember to change the user name and password in `lrr_submission/KeepItSafe.txt` for the database connection.
 
 The above steps are preparation work. Now we could clone the LRR's repository to `/var/www/html/`.
 Rename LRR to lrr.  Change the owner of lrr: `sudo chown -R $USER:$USER /var/www/lrr`. Edit apache configure file: `sudo nano /etc/apache2/sites-available/lrr.conf`.
