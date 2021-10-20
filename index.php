@@ -40,7 +40,7 @@ if (isset($_SESSION["user_fullname"])) {
     <div class="text-center">
     <br><input type="submit" class="btn-primary" value="Login">
     </div>
-    <br> <a href="recover_password.php" style="font-weight:normal;color:#2471A3font-family: Poppins-Regular;
+    <br> <a href="recover_password.php" style="font-weight:normal;color:#2471A3; font-family: Poppins-Regular;
     font-size: 17px;">Reset my password</a>
     <div class="text-center">
     <br><span class="txt1">Don't have an account?</span>
@@ -81,7 +81,7 @@ if (isset($_SESSION["user_fullname"])) {
 </div>
 
 
-<div style="" id="footer">
+<div id="footer">
     LRR was originally developed as a <a href="http://lanlab.org/course/2018f/se/homepage.html" style="color:white;">software engineering course project</a> by Mohamed Nor and Elmahdi Houzi.  Please submit your suggestions or bug reports to  lanhui _at_ zjnu.edu.cn.  Last updated on 18/04/2020 by Ashly. <a href="./homepage" style="color:white;">More information ...</a>
     </div>
 
