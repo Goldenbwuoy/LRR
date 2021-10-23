@@ -1,0 +1,12 @@
+#After you have inserted the student IDs into 'student_data' table of lrr,
+#append the same student IDs here to be used for signup automation.
+#Make sure that ALL student IDs here are ALREADY HAVE BEEN INSERTED into student_data table before executing 
+#the tests otherwise it will signup() text case will fail.
+#The following students IDs are examples only, replace them according to the student IDs inserted
+#into the database by you. Suppose we have inserted 202032020727, 202032020728, 202032020729 into
+#the 'student_data' table of LRR database, then we would post them here as well (DO NOT START LINES WITH '#'
+# OTHERWISE IT WILL BE IGNORED).
+202032020726
+202032020727
+202032020728
+202032020729

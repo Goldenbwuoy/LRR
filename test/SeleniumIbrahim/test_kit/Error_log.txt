@@ -1,0 +1,318 @@
+[ERROR]14/04/2021-00:41:55>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 38, in create_new_account
+    new_account_form = wait2.until(presence_of_element_located(By.ID, "frm_create_acc"))
+NameError: name 'presence_of_element_located' is not defined
+
+[ERROR]14/04/2021-00:42:58>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 38, in create_new_account
+    new_account_form = wait2.until(EC.presence_of_element_located(By.ID, "frm_create_acc"))
+TypeError: __init__() takes 2 positional arguments but 3 were given
+
+[ERROR]14/04/2021-00:44:31>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 41, in create_new_account
+    name_field = new_account_form.find_element(By.XPATH, "//form[@id='frm_create_acc']\
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //form[@id='frm_create_acc']				/input[@name='name' because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//form[@id='frm_create_acc']				/input[@name='name'' is not a valid XPath expression.
+  (Session info: chrome=89.0.4389.114)
+
+
+[ERROR]14/04/2021-00:45:59>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 41, in create_new_account
+    name_field = new_account_form.find_element(By.XPATH, "//form[@id='frm_create_acc']/input[@name='name'")
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //form[@id='frm_create_acc']/input[@name='name' because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//form[@id='frm_create_acc']/input[@name='name'' is not a valid XPath expression.
+  (Session info: chrome=89.0.4389.114)
+
+
+[ERROR]14/04/2021-00:47:04>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 41, in create_new_account
+    name_field = new_account_form.find_element(By.XPATH, "//form[@id='frm_create_acc']\
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//form[@id='frm_create_acc']				/input[@name='name']"}
+  (Session info: chrome=89.0.4389.114)
+
+
+[ERROR]14/04/2021-00:47:44>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 41, in create_new_account
+    name_field = new_account_form.find_element(By.XPATH, "//form[@id='frm_create_acc']/input[@name='name']")
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//form[@id='frm_create_acc']/input[@name='name']"}
+  (Session info: chrome=89.0.4389.114)
+
+
+[ERROR]14/04/2021-00:49:28>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 41, in create_new_account
+    name_field = new_account_form.find_element(By.XPATH, "//form[@id='frm_create_acc']/input[@name='Full Name']")
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//form[@id='frm_create_acc']/input[@name='Full Name']"}
+  (Session info: chrome=89.0.4389.114)
+
+
+[ERROR]14/04/2021-00:51:31>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 41, in create_new_account
+    name_field = new_account_form.find_element(By.XPATH, "//input[@name='Full Name']")
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='Full Name']"}
+  (Session info: chrome=89.0.4389.114)
+
+
+[ERROR]14/04/2021-13:56:18>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 139, in account_block_activate
+    exist_acc_tab = wait2.until(EC.presence_of_element_located((By.XPATH, "/html/body/div[2]/div[1]/div/ul/li[3]/a")))
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+[ERROR]14/04/2021-13:57:14>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 150, in account_block_activate
+    block_btn.click()
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn-success" onclick="blockUser(537,'Active')">...</button> is not clickable at point (582, 469). Other element would receive the click: <input type="text" name="url" placeholder="Choose Custom URL " class="form-control" required="">
+  (Session info: chrome=89.0.4389.114)
+
+
+[ERROR]14/04/2021-13:58:01>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 150, in account_block_activate
+    block_btn.click()
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn-danger" onclick="blockUser(537,'...ed')">Block</button> is not clickable at point (574, 469). Other element would receive the click: <input type="text" name="url" placeholder="Choose Custom URL " class="form-control" required="">
+  (Session info: chrome=89.0.4389.114)
+
+
+[ERROR]14/04/2021-14:02:29>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 149, in account_block_activate
+    block_btn = wait3.until(EC.presence_of_element_located((By.LINK_TEXT, "Block")))
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+[ERROR]14/04/2021-14:15:58>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 144, in account_block_activate
+    exist_acc_tab = wait2.until(EC.presence_of_element_located((By.ID, "acc_table")))
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+[ERROR]14/04/2021-14:18:19>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 145, in account_block_activate
+    exist_acc_tab.click()
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=89.0.4389.114)
+
+
+[ERROR]14/04/2021-14:19:23>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\utility.py", line 47, in getSession
+    driver.get(self.getPageURL())
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=89.0.4389.114)
+
+
+[ERROR]14/04/2021-14:19:28>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\utility.py", line 47, in getSession
+    driver.get(self.getPageURL())
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=89.0.4389.114)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\utility.py", line 70, in login
+    driver = self.getSession()
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\utility.py", line 55, in getSession
+    self.killSession(driver)
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\utility.py", line 145, in killSession
+    driver.close()
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 688, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: chrome not reachable
+  (Session info: chrome=89.0.4389.114)
+
+
+[ERROR]14/04/2021-14:19:28>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\utility.py", line 47, in getSession
+    driver.get(self.getPageURL())
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: unknown error: cannot determine loading status
+from disconnected: received Inspector.detached event
+  (Session info: chrome=89.0.4389.114)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\utility.py", line 70, in login
+    driver = self.getSession()
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\utility.py", line 55, in getSession
+    self.killSession(driver)
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\utility.py", line 145, in killSession
+    driver.close()
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 688, in close
+    self.execute(Command.CLOSE)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: chrome not reachable
+  (Session info: chrome=89.0.4389.114)
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 135, in account_block_activate
+    driver = self.utility.login(self)
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\utility.py", line 85, in login
+    self.killSession(driver)
+UnboundLocalError: local variable 'driver' referenced before assignment
+
+[ERROR]14/04/2021-14:23:07>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 150, in account_block_activate
+    block_btn.click()
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn-danger" id="block_acc_1" onclick="blockUser(537,'...ed')">Block</button> is not clickable at point (574, 469). Other element would receive the click: <input type="text" name="url" placeholder="Choose Custom URL " class="form-control" required="">
+  (Session info: chrome=89.0.4389.114)
+
+
+[ERROR]14/04/2021-14:32:06>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 149, in account_block_activate
+    block_btn = wait2.until(EC.presence_of_element_located((By.XPATH, "//table[@id='acc_table']/button[@id='block_acc_1']")))
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\support\wait.py", line 80, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+
+[ERROR]14/04/2021-14:34:01>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 150, in account_block_activate
+    block_btn.find_element(By.LINK_TEXT, "Block").click()
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 658, in find_element
+    return self._execute(Command.FIND_CHILD_ELEMENT,
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"link text","selector":"Block"}
+  (Session info: chrome=89.0.4389.114)
+
+
+[ERROR]14/04/2021-14:35:58>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 151, in account_block_activate
+    block_btn.click()
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 80, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webelement.py", line 633, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Ibrahim\AppData\Local\Programs\Python\Python39\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <button class="btn-danger" id="block_acc_1" onclick="blockUser(537,'...ed')">Block</button> is not clickable at point (574, 469). Other element would receive the click: <input type="text" name="url" placeholder="Choose Custom URL " class="form-control" required="">
+  (Session info: chrome=89.0.4389.114)
+
+
+[ERROR]14/04/2021-16:41:19>Traceback (most recent call last):
+  File "D:\Graduation Thesis\LRR workstation\Testing Workstation\test_github\LRR\test_kit\admin.py", line 206, in assign_TA
+    assign_btn,click()
+NameError: name 'click' is not defined
+

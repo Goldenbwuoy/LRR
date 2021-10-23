@@ -1,0 +1,10 @@
+The following two users must be created before executing the test suite since they represent
+two generic main actors of LRR, an instructor and a student.
+
+Instructor User:
+Uname = 202032070221
+Pass = aA124536!
+
+Student User:
+Uname = 202032070222
+Pass = aA124536!
