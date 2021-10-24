@@ -154,9 +154,15 @@ We can also communicate through pull requests.  You make a pull request, I revie
 
 
 
-# The Original GitHub Repo
+# Related GitHub Repositories
 
-The original GitHub Repo is at https://github.com/EngMohamedNor/LabReportRepo
+- The original repository:  https://github.com/EngMohamedNor/LabReportRepo
+
+- The Lan Laboratory repository: https://github.com/lanlab-org/LRR
+
+- Zhan Shenchen repository: https://github.com/SawiMg/Selenium
+
+- Ibrahim repository: https://github.com/hema001/LRR
 
 
 # Contributor List
