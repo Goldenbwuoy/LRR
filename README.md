@@ -2,10 +2,10 @@
 
 LRR (Lab Report Repository) is an online software application for course instructors to post, receive and mark assignments, and for students to submit assignments, or submit re-marking requests.
 
-This software was originally developed by by Mahomed Nor in 2018, a graduate student in the Department of Computer Science at the Zhejiang Normal University,
+This software was originally developed by Mahomed Nor in 2018, a graduate student in the Department of Computer Science at the Zhejiang Normal University,
 while he was taking a graduate course called **Advanced Software Engineering** (http://lanlab.org/course/2018f/se/homepage.html).
 
-The LRR's project home page is at http://121.4.94.30/homepage/.  For potential project contributors, we recommend that you browse its home page first to familiarize yourselves with the project.
+The LRR's project home page is at http://121.4.94.30/homepage/.  For potential project contributors, we recommend that you browse its home page first to familiarize yourself  with the project.
 
 
 
@@ -20,11 +20,11 @@ Our mission is to make the experience of submitting assignments great for tens o
 
 ## Hui's steps
 
-I spent about two hours on installing LRR to a bare, remote Ubuntu server (Ubuntu 20.04 LTS).
+I spent about two hours installing LRR to a bare, remote Ubuntu server (Ubuntu 20.04 LTS).
 
 LRR needs Apache and MySQL to run.  I followed [How To Install Linux, Apache, MySQL, PHP (LAMP) stack on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04) to set up these server applications.
 
-LRR uses a database called `lrr`.  I need to export existing `lrr` to a plain text file (including many sql commands) and import that text file to the newly created `lrr` database on the new server.
+LRR uses a database called `lrr`.  I need to export the existing `lrr` to a plain text file (including many sql commands) and import that text file to the newly created `lrr` database on the new server.
 The command for exporting the database is `mysqldump -u mnc -p lrr > lrr_database_dump.txt`.
 The command for importing is `mysql -u mnc -p lrr < lrr_database_dump.txt`.  Read [How to Import and Export MySQL Databases in Linux](https://phoenixnap.com/kb/import-and-export-mysql-database) for more detail.
 
@@ -51,7 +51,7 @@ Visit the LRR application by entering this URL in a web browser: http://121.4.94
 
 ## Enock's steps
 
-Enock, a former graduate student here, has made a tutorial about how he deployed LRR to a remote server (http://lanlab.org/course/2021s/spm/PuTTY-Server.txt).
+Enock, a graduate student here, has made a tutorial about how he deployed LRR to a remote server (http://lanlab.org/course/2021s/spm/PuTTY-Server.txt).
 
 
 
@@ -88,7 +88,7 @@ Most bugs are [recorded on Bugzilla](http://118.25.96.118/bugzilla/buglist.cgi?b
 
 -  [Priority low] *Receiving email for password resetting*. Password resetting link is not always sent successfully.
 
--  [Priority medium] *Discuss how assignements should be stored?* `/student-number/course-code/semester/section-number/assignement-title/submission.txt`
+-  [Priority medium] *Discuss how assignments should be stored?* `/student-number/course-code/semester/section-number/assignement-title/submission.txt`
 
 -  [SOLVED] Editing the assignment title after uploading a new assignment (instructor).
 
@@ -139,7 +139,7 @@ Make sure your changes can pass all the tests in folder [./test](http://121.4.94
 
 To submit bug reports or improvement ideas, please contact Hui [lanhui at zjnu.edu.cn].  He could open a Bugzilla account for you.
 
-We can also communicate through pull request.  You make a pull request, I review it and comment on it, and you revise your pull request until everyone is happy so that your changes get merged to the master branch.
+We can also communicate through pull requests.  You make a pull request, I review it and comment on it, and you revise your pull request until everyone is happy so that your changes get merged to the master branch.
 
 
 
