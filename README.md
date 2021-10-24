@@ -132,7 +132,7 @@ https://github.com/spm2020spring/TeamCollaborationTutorial/blob/master/team.rst
 
 ## Testing
 
-Make sure your changes can pass all the tests in folder `./test`.
+Make sure your changes can pass all the tests in folder [./test](http://121.4.94.30:3000/mrlan/LRR/src/branch/master/test).
 
 
 ## Communications Method
