@@ -218,3 +218,13 @@ Twizere  -  Twizere Pacifique  -  201925800174
 
 Nicole-Rutagengwa  - Nicole Rutagengwa  - 201925800169
 
+*hema001* - Ibrahim Mohamed Ibrahim Ismail - omitted
+
+*SawiMg* - Zhan Shenchen - omitted
+
+
+# References
+
+- 詹沈晨. (2020). [网页程序测试自动化 (Selenium) 测试效率](http://lanlab.org/ZhanShenchen-On-Automated-Web-Application-Test-Efficiency-with-Selenium.doc)
+
+- Ibrahim. (2021).  [Defect analysis for LRR](http://lanlab.org/thesis/Defect-Analysis-for-LRR.docx)
