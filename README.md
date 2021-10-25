@@ -162,7 +162,7 @@ We can also communicate through pull requests.  You make a pull request, I revie
 
 - Zhan Shenchen repository: https://github.com/SawiMg/Selenium
 
-- Ibrahim repository: https://github.com/hema001/LRR
+- Ibrahim repository: https://github.com/hema-001/LRR
 
 
 # Contributor List
@@ -215,7 +215,7 @@ Twizere  -  Twizere Pacifique  -  201925800174
 
 Nicole-Rutagengwa  - Nicole Rutagengwa  - 201925800169
 
-*hema001* - Ibrahim Mohamed Ibrahim Ismail - omitted
+*hema-001* - Ibrahim Mohamed Ibrahim Ismail - omitted
 
 *SawiMg* - Zhan Shenchen - omitted
 
