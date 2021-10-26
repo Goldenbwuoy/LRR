@@ -160,7 +160,7 @@ We can also communicate through pull requests.  You make a pull request, I revie
 
 - The Lan Laboratory repository: https://github.com/lanlab-org/LRR
 
-- Zhan Shenchen repository: https://github.com/SawiMg/Selenium
+- Zhan Shenchen repository: https://github.com/SawiMg/Seleium
 
 - Ibrahim repository: https://github.com/hema-001/LRR
 
