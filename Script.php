@@ -75,6 +75,7 @@ if (!empty($_POST["frm_signup_2"])) {
     $_SESSION['user_fullname'] = $fullname;
     $_SESSION['user_type'] = "Student";
     $_SESSION['user_email'] = $email;
+    $_SESSION['user_student_id'] = $student_id;
 
     // check confirmed password
     if (strcasecmp($password, $confirmpassword) != 0) {
