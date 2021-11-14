@@ -1,5 +1,6 @@
 <?php
 include 'NoDirectPhpAcess.php';
+include 'IsValidSession.php';
 ?>
 
 <?php

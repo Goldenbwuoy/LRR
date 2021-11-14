@@ -163,6 +163,9 @@ if (!empty($_POST["frm_login"])) {
                 $_SESSION['user_student_id'] = $row['Student_ID'];
                 $_SESSION['user_type'] = $row['UserType'];
                 $_SESSION['user_fullname'] = $row['Full_Name'];
+                $_SESSION['start'] = time();
+                $session_duration = 120;
+                $_SESSION['expire'] = $_SESSION['start'] + ($session_duration * 60);
 
                 if ($_SESSION['user_type'] == "Student") {
                     header("Location: Courses.php");
